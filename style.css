@@ -1,88 +1,150 @@
-*,
-align-items: center;
-justify-content: space-between;
-gap: 1rem;
-font-size: 0.85rem;
-color: var(--muted);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-
-.footer-links {
-display: flex;
-gap: 0.9rem;
+:root {
+  --accent: #4ade80;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --radius-lg: 1rem;
+  --parallax-x: 0px;
+  --parallax-y: 0px;
 }
 
-
-.footer-links a {
-text-decoration: none;
-color: var(--muted);
+/* Base layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: var(--text);
+  background: #000;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-
-.footer-links a:hover {
-color: var(--accent-strong);
+/* Full-page animated space background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url("assets/A_high-resolution_digital_space_art_illustration_s.png") repeat;
+  background-size: cover;
+  transform: translate(var(--parallax-x), var(--parallax-y)) scale(1.02);
+  animation: spaceDrift 120s linear infinite;
+  opacity: 0.9;
+  z-index: -2;
 }
 
+/* Flickering stars overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.08;
+  animation: starsFlicker 5s ease-in-out infinite alternate;
+  z-index: -1;
+}
 
-/* Responsive */
+/* Nebula glow overlay */
+.glow-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent 70%),
+              radial-gradient(circle at 80% 30%, rgba(74,222,128,0.05), transparent 70%),
+              radial-gradient(circle at 20% 80%, rgba(0,200,255,0.05), transparent 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: nebulaPulse 15s ease-in-out infinite alternate;
+  z-index: -1;
+}
 
+/* Animations */
+@keyframes starsFlicker {
+  0% { opacity: 0.05; }
+  100% { opacity: 0.12; }
+}
 
-@media (min-width: 800px) {
+@keyframes spaceDrift {
+  0% { background-position: 0 0; }
+  50% { background-position: -40px -20px; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes nebulaPulse {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(1.05); }
+}
+
+/* Containers & Layout */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.4rem;
+}
+
 .grid-2 {
-grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
-align-items: center;
+  display: grid;
+  gap: 2rem;
 }
 
+.tab-section {
+  display: none;
+  padding: 3rem 0;
+}
+.tab-section.active { display: block; }
 
-.cards-grid {
-grid-template-columns: repeat(3, minmax(0, 1fr));
+.site-header, .site-footer {
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 0.8rem 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo-text span { color: var(--accent); }
+.logo-img { height: 28px; width: 28px; border-radius: 50%; }
 
-.cards-grid > .card:nth-child(1) {
-grid-column: span 2;
+/* Typography */
+h1, h2, h3 { color: var(--accent); margin: 0.4rem 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hero-subtitle { color: var(--muted); max-width: 600px; }
+
+/* Small design touches */
+.pill, .tag {
+  border: 1px solid rgba(148,163,184,0.4);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tag { background: rgba(255,255,255,0.05); }
+
+.hero-card {
+  background: rgba(0,0,0,0.55);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(31,41,55,0.95);
 }
 
-
-.cv-grid {
-grid-template-columns: 2fr 2fr 1.3fr;
-}
-
-
-.gallery-grid {
-grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-}
-
-
-@media (max-width: 799px) {
-main {
-padding-top: 1.6rem;
-}
-
-
-.nav-container {
-align-items: flex-start;
-flex-direction: column;
-gap: 0.55rem;
-height: auto;
-padding: 0.6rem 0 0.55rem;
-}
-
-
-.main-nav {
-justify-content: flex-start;
-}
-
-
-.grid-2 {
-grid-template-columns: minmax(0, 1fr);
-}
-
-
-.cards-grid,
-.cv-grid,
-.gallery-grid {
-grid-template-columns: minmax(0, 1fr);
-}
+footer {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  font-size: 0.9rem;
 }
