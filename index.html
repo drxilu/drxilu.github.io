@@ -3,143 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xi Lu | Sloths Intelligence</title>
-  <meta name="description" content="Sloths Intelligence — Xi Lu’s data portfolio blending space, calm, and modern tech style." />
+  <meta name="description" content="Messy business data? Our hybrid AI turns it into confident decisions." />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Favicons (optional, only if you have these files in assets/) -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
   <link rel="icon" href="assets/favicon.ico">
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="glow-overlay"></div>
-
+<body class="contact-page">
   <header class="site-header">
     <div class="container nav-container">
       <div class="logo">
-        <!-- Optional: only works if this file exists -->
-        <img class="logo-img" src="assets/sloths-intelligence_badge_128.png" alt="Sloths Intelligence logo" />
-        <span class="logo-text">Sloths <span>Intelligence</span></span>
+        <a href="index.html"><img class="logo-img" src="assets/logo.png" alt="Sloths Intel logo" /></a>
+        <span class="logo-text">Xi <span>Lu, <span>PhD</span></span></span>
       </div>
       <nav class="main-nav">
-        <button class="nav-link active" data-section="home">Home</button>
-        <button class="nav-link" data-section="cv">CV</button>
-        <button class="nav-link" data-section="education">Education</button>
-        <button class="nav-link" data-section="projects">Projects</button>
-        <button class="nav-link" data-section="visuals">Visuals</button>
-        <button class="nav-link" data-section="interviews">Interviews</button>
-        <button class="nav-link" data-section="football">Football</button>
-        <button class="nav-link" data-section="cooking">Cooking</button>
+        <!-- HOME dropdown -->
+        <details class="nav-dropdown">
+          <summary class="nav-link active" href="page">home</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Home sections">
+            <a class="nav-dropdown-link" href="index.html#home" role="menuitem">home</a>
+            <a class="nav-dropdown-link" href="index.html#about" role="menuitem">about</a>
+          </div>
+        </details>
+        <!-- WORK dropdown -->
+        <details class="nav-dropdown">
+          <summary class="nav-link" href="work.html">work</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Work sections">
+            <a class="nav-dropdown-link" href="work.html#currentfocus" role="menuitem">current focus</a>
+            <a class="nav-dropdown-link" href="work.html#selectedprojects" role="menuitem">selected projects</a>
+            <a class="nav-dropdown-link" href="work.html#portfolio" role="menuitem">portfolio</a>
+            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">cv</a>
+            <a class="nav-dropdown-link" href="work.html#testimonials" role="menuitem">testimonials</a>
+          </div>
+        </details>
+
+        <!-- Keep the rest as top-level -->
+        <details class="nav-dropdown">
+          <summary class="nav-link" href="public.html">media&public engagement</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Media & Public Engagement sections">
+            <a class="nav-dropdown-link" href="public.html#talks" role="menuitem">talks</a>
+            <a class="nav-dropdown-link" href="public.html#interviews" role="menuitem">interviews</a>
+            <a class="nav-dropdown-link" href="public.html#publications" role="menuitem">publications</a>
+          </div>
+        </details>
+
+        <a class="nav-link" href="support.html">support</a>
+
+        <a class="nav-link" href="contact.html">contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
     <!-- HOME -->
-    <section id="home" class="tab-section active">
-      <div class="container grid-2">
+    <section id="home" class="tab-section">
+      <div class="container grid-1 center-horizontal center-vertical">
         <div>
-          <p class="pill">🦥 Calm in Motion, Data in Flow</p>
-          <h1>Xi Lu</h1>
-          <p class="hero-subtitle">
-            I’m a <span class="highlight">data professional</span> exploring the intersection of analytics, design, and calm thinking.
-            Based between Cambridge, UK & Hong Kong, I craft experiences that merge logic and serenity.
-          </p>
-          <div class="hero-tags">
-            <span class="tag">Data</span>
-            <span class="tag">Tech</span>
-            <span class="tag">Football</span>
-            <span class="tag">Cooking</span>
+          <h1>Home</h1>
+          <div class="spacer-lg"></div>
+          <div class="about-quote">  
+            <p class="quote-lead">Messy business data?</p>
+            <p class="quote-body">Our hybrid AI turns it into confident decisions.</p>
           </div>
-        </div>
+          <div class="spacer-xl"></div>
 
-        <div class="hero-card">
-          <h2>Profile snapshot</h2>
-          <ul>
-            <li>📍 Location: Cambridge, UK & Hong Kong</li>
-            <li>💼 Role: Data professional</li>
-            <li>💻 Stack: Python, SQL, Power BI, Tableau</li>
-            <li>📫 Email: <a href="mailto:xi.lu@mail.uk">xi.lu@mail.uk</a></li>
-            <li>🐾 Motto: Slow is smooth, smooth is fast</li>
-          </ul>
-          <div class="hero-links">
-            <a href="https://github.com/drxilu" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
+          <p class="pill">Deliberate intelligence for reliable decisions.</p>
         </div>
       </div>
     </section>
 
-    <!-- PLACEHOLDER SECTIONS -->
-    <section id="cv" class="tab-section"><div class="container"><h2>CV</h2><p>Coming soon.</p></div></section>
-    <section id="education" class="tab-section"><div class="container"><h2>Education</h2><p>Coming soon.</p></div></section>
-    <section id="projects" class="tab-section"><div class="container"><h2>Projects</h2><p>Coming soon.</p></div></section>
-    <section id="visuals" class="tab-section"><div class="container"><h2>Visuals</h2><p>Coming soon.</p></div></section>
-    <section id="interviews" class="tab-section"><div class="container"><h2>Interviews & Talks</h2><p>Coming soon.</p></div></section>
-    <section id="football" class="tab-section"><div class="container"><h2>Football</h2><p>Coming soon.</p></div></section>
-    <section id="cooking" class="tab-section"><div class="container"><h2>Cooking</h2><p>Coming soon.</p></div></section>
+    <!-- ABOUT (exactly 3 paragraphs) -->
+    <section id="about" class="tab-section">
+      <div class="container">
+        <h1>About</h1>
+        <div class="divider"></div>
+
+        <div class="spacer-lg"></div>
+        <div class="about-quote">
+          <p class="quote-lead">
+            Sloths are often mistaken for slow.
+          </p>
+          <p class="quote-body">
+            In reality, they are <span class="emphasis">efficient and deliberate</span> —
+            evolved to operate in complex environments with minimal waste.
+          </p>
+        </div>
+        <div class="spacer-xl"></div>
+
+        <p>
+          That philosophy guides Sloths Intel. We design AI systems that ignore noise, conserve effort,
+          and act only when it matters.
+        </p>
+        <p>
+          The result is intelligence that stays clear under pressure — reliable and easier to trust
+          when decisions count.
+        </p>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Xi Lu · Built in sloth mode 🦥</p>
-      <div class="footer-links">
-        <a href="https://github.com/drxilu" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <script>
-    // Tab switching
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll(".tab-section");
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+  </script>
 
-    function setActiveSection(id) {
-      sections.forEach(sec => sec.classList.toggle("active", sec.id === id));
-      navLinks.forEach(link => link.classList.toggle("active", link.dataset.section === id));
-    }
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => setActiveSection(link.dataset.section));
+  <script>
+    // Close dropdown after selecting a menu item
+    document.querySelectorAll(".nav-dropdown-link").forEach(a => {
+      a.addEventListener("click", () => {
+        const dd = a.closest("details");
+        if (dd) dd.removeAttribute("open");
+      });
     });
 
-    // Year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Parallax space background
-    (function () {
-      const maxOffset = 16; // how far the background moves in px
-
-      function updateParallax(xNorm, yNorm) {
-        const x = (xNorm - 0.5) * -maxOffset;
-        const y = (yNorm - 0.5) * -maxOffset;
-        document.body.style.setProperty("--parallax-x", x.toFixed(2) + "px");
-        document.body.style.setProperty("--parallax-y", y.toFixed(2) + "px");
-      }
-
-      window.addEventListener("pointermove", function (e) {
-        const xNorm = e.clientX / window.innerWidth;
-        const yNorm = e.clientY / window.innerHeight;
-        updateParallax(xNorm, yNorm);
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      document.querySelectorAll(".nav-dropdown[open]").forEach(dd => {
+        if (!dd.contains(e.target)) dd.removeAttribute("open");
       });
-
-      // Gentle autonomous drift, so it moves even when idle
-      let t = 0;
-      setInterval(function () {
-        t += 0.0025;
-        const xNorm = 0.5 + Math.sin(t) * 0.02;
-        const yNorm = 0.5 + Math.cos(t) * 0.02;
-        updateParallax(xNorm, yNorm);
-      }, 30);
-    })();
+    });
   </script>
+
 </body>
 </html>
