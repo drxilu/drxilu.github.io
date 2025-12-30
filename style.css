@@ -683,3 +683,20 @@ h1, h2, h3 {
   scroll-margin-top: var(--anchor-offset);
 }
 
+.work-links {
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+/* Make figures and images span full content width */
+figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
