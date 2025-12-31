@@ -114,8 +114,8 @@ html, body{
   align-items: center;
   justify-content: center;
 
-  height: 32px;
-  padding: 0 10px;
+  height: 27px;
+  padding: 0 8px;
 
   border-radius: 9999px;
   border: 1px solid rgba(15,31,23,0.10);
@@ -123,7 +123,7 @@ html, body{
   background: rgba(255,255,255,0.92);
   color: var(--muted);
 
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 550;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -354,7 +354,7 @@ a:hover{ text-decoration: underline; }
 .nav-dropdown > summary::after {
   content: "≡";
   margin-left: 0.5rem;
-  font-size: 1.5em;
+  font-size: 1.2em;
   opacity: 0.5;
   letter-spacing: -0.05em;
 }
@@ -366,7 +366,7 @@ a:hover{ text-decoration: underline; }
   top: calc(100% + 10px);
   left: 0;
   min-width: 220px;
-  padding: 0.6rem;
+  padding: 0.5rem;
   border-radius: 14px;
   background: rgba(255,255,255,0.95);
   border: 1px solid var(--divider);
