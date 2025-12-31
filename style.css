@@ -708,4 +708,30 @@ figure img {
   text-decoration: none;
 }
 
+/* 50% width figure */
+.figure-half {
+  max-width: 50%;
+  margin: 1.5rem auto; /* keeps it centred */
+}
+
+/* Zoom behaviour */
+.zoomable img {
+  width: 100%;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+/* Click / tap zoom */
+.zoomable img:active {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
+.zoomable img {
+  transition: transform 0.25s ease;
+}
+
+.zoomable img:hover {
+  transform: scale(2);
+}
 
