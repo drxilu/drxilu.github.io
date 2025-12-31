@@ -700,3 +700,12 @@ figure img {
   max-width: 100%;
 }
 
+.profile-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+

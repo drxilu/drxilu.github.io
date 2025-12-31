@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Complex problems? I work with data, AI, and real-world constraints to turn uncertainty into
+clear, dependable decisions." />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="icon" href="assets/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html"><img class="logo-img" src="assets/logo.png" alt="Sloths Intel logo" /></a>
+        <span class="logo-text">Xi <span>Lu, <span>PhD</span></span></span>
+      </div>
+      <nav class="main-nav">
+        <!-- HOME dropdown -->
+        <details class="nav-dropdown">
+          <summary class="nav-link active" href="page">home</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Home sections">
+            <a class="nav-dropdown-link" href="index.html#overview" role="menuitem">overview</a>
+            <a class="nav-dropdown-link" href="index.html#about" role="menuitem">about</a>
+          </div>
+        </details>
+        <!-- WORK dropdown -->
+        <details class="nav-dropdown">
+          <summary class="nav-link" href="work.html">work</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Work sections">
+            <a class="nav-dropdown-link" href="work.html#currentfocus" role="menuitem">current focus</a>
+            <a class="nav-dropdown-link" href="work.html#selectedwork" role="menuitem">selected work</a>
+            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">cv</a>
+            <a class="nav-dropdown-link" href="work.html#testimonials" role="menuitem">testimonials</a>
+          </div>
+        </details>
+
+        <!-- Keep the rest as top-level -->
+        <details class="nav-dropdown">
+          <summary class="nav-link" href="media.html">media</summary>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Media">
+            <a class="nav-dropdown-link" href="media.html#talks" role="menuitem">talks</a>
+            <a class="nav-dropdown-link" href="media.html#interviews" role="menuitem">interviews</a>
+            <a class="nav-dropdown-link" href="media.html#publications" role="menuitem">publications</a>
+          </div>
+        </details>
+
+        <a class="nav-link" href="support.html">support</a>
+
+        <a class="nav-link" href="contact.html">contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="overview" class="tab-section">
+      <div class="container grid-1 center-horizontal center-vertical">
+        <div>
+          <h1>Overview</h1>
+          <div class="spacer-lg"></div>
+          <div class="about-quote">  
+            <p class="quote-lead">Complex problems?</p>
+            <p class="quote-body">
+            I am an independent data professional with data, AI, and
+            real-world constraints to turn uncertainty into clear and dependable decisions.
+            </p>
+          </div>
+          <div class="spacer-xl"></div>
+
+          <p class="pill">Deliberate intelligence. Practical outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (exactly 3 paragraphs) -->
+    <section id="about" class="tab-section">
+      <div class="container">
+        <h1>About</h1>
+        <div class="divider"></div>
+
+        <div class="spacer-lg"></div>
+        <div class="about-quote">
+          <p class="quote-lead">
+            Sloths are often mistaken for slow.
+          </p>
+          <p class="quote-body">
+            In reality, they are <span class="emphasis">efficient and deliberate</span> —
+            evolved to operate in complex environments with minimal waste.
+          </p>
+        </div>
+        <div class="spacer-xl"></div>
+
+      <p>
+      That philosophy shapes my work as an independent data professional.
+      I focus on building data and AI systems that prioritise clarity over speed,
+      and signal over noise — especially in resource-constrained, real-world settings.
+      </p>
+      <p>
+      Whether working independently or through collaborations such as <a href="https://slothsintel.com/">Sloths Intel</a>,
+      my aim is the same: intelligence that remains understandable, reliable, and
+      trustworthy when decisions genuinely matter.
+      </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("site-footer").innerHTML = html;
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+  </script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Close dropdown after selecting a menu item
+    document.querySelectorAll(".nav-dropdown-link").forEach(a => {
+      a.addEventListener("click", () => {
+        const dd = a.closest("details");
+        if (dd) dd.removeAttribute("open");
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      document.querySelectorAll(".nav-dropdown[open]").forEach(dd => {
+        if (!dd.contains(e.target)) dd.removeAttribute("open");
+      });
+    });
+  </script>
+
+</body>
+</html>
