@@ -115,7 +115,7 @@ html, body{
   justify-content: center;
 
   height: 36px;
-  padding: 0 8px;
+  padding: 0 10px;
 
   border-radius: 9999px;
   border: 1px solid rgba(15,31,23,0.10);
@@ -736,5 +736,5 @@ figure img {
 }
 
 .tab-section:first-of-type {
-  margin-top: 3.6rem;
+  margin-top: 6.4rem;
 }
