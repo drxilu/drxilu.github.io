@@ -6,9 +6,22 @@
 }
 
 /* make anchor jumps stop below the fixed header too */
-html{
-  scroll-padding-top: var(--header-offset);
+/* Use ONE offset system everywhere */
+:root{
+  --header-offset: 108px;
 }
+
+/* mobile header is taller because nav wraps */
+@media (max-width: 520px){
+  :root{
+    --header-offset: 148px; /* try 140–160px */
+  }
+}
+
+/* Make sure all scroll offset uses the same var */
+html{ scroll-padding-top: var(--header-offset); }
+body{ padding-top: var(--header-offset); }
+section, .tab-section, h1, h2, h3{ scroll-margin-top: var(--header-offset); }
 
 /* reserve space so content never sits under the header */
 body{
@@ -665,9 +678,6 @@ p {
   margin: 0.1rem 0;
 }
 
-:root{
-  --anchor-offset: 10px; /* set to your sticky header height */
-}
 
 /* Make ALL hash/anchor jumps stop below the sticky header */
 html {
@@ -736,5 +746,5 @@ figure img {
 }
 
 .tab-section:first-of-type {
-  margin-top: 8rem;
+  margin-top: 1.2rem;
 }
