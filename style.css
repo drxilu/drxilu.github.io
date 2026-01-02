@@ -453,7 +453,7 @@ body.sloths-page main .tab-section .container{
   border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
 }
 
 /* Typography tuning: calm authority, better scanning */
@@ -494,7 +494,7 @@ body.sloths-page a:hover{
     padding: 1rem 0;
   }
   body.sloths-page main .tab-section .container{
-    padding: 1rem 1.2rem;
+    padding: 5rem 2rem;
   }
   body.sloths-page p{
     max-width: 100%;
