@@ -14,7 +14,7 @@
 /* mobile header is taller because nav wraps */
 @media (max-width: 520px){
   :root{
-    --header-offset: 148px; /* try 140–160px */
+    --header-offset: 160px; /* try 140–160px */
   }
 }
 
@@ -74,7 +74,7 @@ html, body{
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.4rem;
+  padding: 0 1.5rem;
 }
 
 /* Header + footer “card” */
@@ -453,7 +453,7 @@ body.sloths-page main .tab-section .container{
   border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  padding: 1rem 1.8rem;
+  padding: 2rem 2rem;
 }
 
 /* Typography tuning: calm authority, better scanning */
