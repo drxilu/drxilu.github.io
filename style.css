@@ -486,7 +486,7 @@ body.sloths-page a:hover{
 /* Mobile: keep it airy, not cramped */
 @media (max-width: 520px){
   body.sloths-page main .tab-section{
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
   }
   body.sloths-page main .tab-section .container{
     padding: 1rem 2rem;
@@ -496,7 +496,7 @@ body.sloths-page a:hover{
   }
   /* but make the FIRST section start lower */
   body.sloths-page main .tab-section:first-of-type{
-    padding-top: 10rem;        /* bigger first gap */
+    padding-top: 8rem;        /* bigger first gap */
   }
 }
 
