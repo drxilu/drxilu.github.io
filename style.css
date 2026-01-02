@@ -160,11 +160,6 @@ html, body{
   background: var(--accent-soft);
 }
 
-/* Sections */
-.tab-section{
-  padding: 1rem 0;
-}
-
 /* Layout helpers */
 .grid-1{ display: grid; }
 .center-horizontal{ justify-items: start; }
@@ -444,7 +439,7 @@ body.sloths-page{
 
 /* Make the main contact content feel “considered” (a calm reading panel) */
 body.sloths-page main .tab-section{
-  padding: 1rem 0; /* slightly slower pacing */
+  padding: 4rem 0; /* slightly slower pacing */
 }
 
 body.sloths-page main .tab-section .container{
@@ -453,7 +448,7 @@ body.sloths-page main .tab-section .container{
   border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
 }
 
 /* Typography tuning: calm authority, better scanning */
@@ -491,10 +486,10 @@ body.sloths-page a:hover{
 /* Mobile: keep it airy, not cramped */
 @media (max-width: 520px){
   body.sloths-page main .tab-section{
-    padding: 1rem 0;
+    padding: 4rem 0;
   }
   body.sloths-page main .tab-section .container{
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
   }
   body.sloths-page p{
     max-width: 100%;
@@ -746,5 +741,5 @@ figure img {
 }
 
 .tab-section:first-of-type {
-  margin-top: 4.5rem;
+  margin-top: 3rem;
 }
