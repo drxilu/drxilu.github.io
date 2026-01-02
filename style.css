@@ -489,13 +489,13 @@ body.sloths-page a:hover{
     padding: 4rem 0;
   }
   body.sloths-page main .tab-section .container{
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
   }
   body.sloths-page p{
     max-width: 100%;
   }
   .tab-section:first-of-type {
-  margin-top: 8rem;
+  margin-top: 12rem;
 }
 }
 
