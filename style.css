@@ -486,19 +486,26 @@ body.sloths-page a:hover{
 /* Mobile: keep it airy, not cramped */
 @media (max-width: 520px){
   body.sloths-page main .tab-section{
-    padding: 8rem 0;
+    padding: 3rem 0;
   }
+
+  body.sloths-page main .tab-section:first-of-type{
+    padding-top: 8rem;
+  }
+
+  body.sloths-page main .tab-section + .tab-section{
+    margin-top: 4rem;
+  }
+
   body.sloths-page main .tab-section .container{
     padding: 4rem 2rem;
   }
+
   body.sloths-page p{
     max-width: 100%;
   }
-  /* but make the FIRST section start lower */
-  body.sloths-page main .tab-section:first-of-type{
-    padding-top: 8rem;        /* bigger first gap */
-  }
 }
+
 
 
 
