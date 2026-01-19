@@ -104,6 +104,9 @@
           <!-- Contact (top-level) -->
           <a class="mobile-link" href="contact.html">Contact</a>
 
+          <p class="mobile-nav__privacy-note">
+            I only use your information to respond to your enquiry. I respect your privacy.
+          </p>
           
         </nav>
 
@@ -248,6 +251,20 @@
     document.addEventListener("keydown", (e) => {
       if(e.key === "Escape") closeNav();
     });
+
+      /* click outside closes */
+  document.addEventListener("click", (e) => {
+    if (!mobileNav.classList.contains("is-open")) return;
+
+    const target = e.target;
+    if (!(target instanceof Node)) return;
+
+    const clickedInsidePanel = mobileNav.contains(target);
+    const clickedToggle = toggle && toggle.contains(target);
+
+    if (!clickedInsidePanel && !clickedToggle) closeNav();
+  });
+  
   </script>
 
 </body>
