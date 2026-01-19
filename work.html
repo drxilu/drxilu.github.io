@@ -37,7 +37,7 @@
           <div class="nav-dropdown-menu" role="menu" aria-label="Work sections">
             <a class="nav-dropdown-link" href="work.html#currentfocus" role="menuitem">current focus</a>
             <a class="nav-dropdown-link" href="work.html#selectedwork" role="menuitem">selected work</a>
-            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">cv</a>
+            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">professional cv</a>
             <a class="nav-dropdown-link" href="work.html#testimonials" role="menuitem">testimonials</a>
           </div>
         </details>
@@ -55,6 +55,57 @@
 
         <a class="nav-link" href="contact.html">contact</a>
       </nav>
+
+            <!-- Mobile hamburger (mobile only) -->
+      <button class="nav-toggle" type="button"
+              aria-label="Open menu"
+              aria-controls="mobile-nav"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Mobile overlay nav -->
+      <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+        <div class="mobile-nav__top">
+          <div class="mobile-nav__brand"></div>
+          <button class="mobile-nav__close" type="button" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="mobile-nav__menu" aria-label="Mobile navigation">
+ 
+        <div class="mobile-nav__cta">
+          <a class="mobile-btn mobile-btn--primary" href="contact.html">Let’s chat</a>
+        </div>         
+        <!-- Home (expandable) -->
+          <details class="mobile-acc">
+            <summary>Home</summary>
+            <a href="index.html#overview">Overview</a>
+            <a href="index.html#about">About</a>
+          </details>
+
+          <!-- Work (top-level link; no submenu) -->
+          <details class="mobile-acc">
+            <summary>Work</summary>
+            <a href="work.html#currentfocus">Current Focus</a>
+            <a href="work.html#selectedwork">Selected Work</a>
+            <a href="work.html#cv">Professional CV</a>
+            <a href="work.html#testimonials">Testimonials</a>
+          </details>
+
+          <!-- Media (expandable) -->
+          <details class="mobile-acc">
+            <summary>Media</summary>
+            <a href="media.html#publications">Publications</a>
+            <a href="media.html#interviews">Talks & Interviews</a>
+          </details>
+          
+          <a class="mobile-link" href="support.html">Support</a>
+
+          <!-- Contact (top-level) -->
+          <a class="mobile-link" href="contact.html">Contact</a>
+
+          
+        </nav>
 
     </div>
   </header>
@@ -92,7 +143,38 @@
 
       <div class="sub-divider"></div>
 
-      <!-- 1. AutoPred -->
+      <!-- 7. AutoWeave -->
+      <h2>AutoWeave</h2>
+      <p class="work-links">
+        <a href="https://slothsintel.com/" 
+        target="_blank" 
+        rel="noopener"
+        class="profile-link">
+          <img src="assets/company_logo.png" width="80">
+          <span></span >
+        </a>
+      </p>
+      <p>
+        COMING SOON...
+      </p>
+      <figure class="figure-half zoomable">
+        <img src="assets/company_logo.png" alt="AutoPred hybrid AI for predictive analytics" loading="lazy" />
+        <figcaption>
+          Hybrid AI for reliable data integration and curation at scale.
+        </figcaption>
+      </figure>
+      <p class="work-links">
+        <a href="https://slothsintel.com/" target="_blank" rel="noopener">View project site</a>
+        <span> · </span>
+        <a href="https://github.com/slothsintel" target="_blank" rel="noopener">Explore workflow and code</a>
+      </p>
+      <p>
+        <a href="contact.html">Dive into how AutoWeave orchestrates your AI workflows.</a>
+      </p>
+
+      <div class="sub-divider"></div>
+
+      <!-- 6. AutoPred -->
       <h2>AutoPred: Hybrid AI for Predictive Analytics</h2>
       <p class="work-links">
         <a href="https://slothsintel.com/" 
@@ -123,7 +205,7 @@
 
       <div class="sub-divider"></div>
       
-      <!-- 2. AutoVisuals -->
+      <!-- 5. AutoVisuals -->
       <h2>AutoVisuals: Scalable Creative Automation</h2>
       <p class="work-links">
         <a href="https://autovisuals.slothsintel.com/" 
@@ -157,7 +239,7 @@
 
       <div class="sub-divider"></div>
 
-      <!-- 3. AutoTrac -->
+      <!-- 4. AutoTrac -->
       <h2>AutoTrac: Low-Friction Time & Income Tracking</h2>
       <p class="work-links">
         <a href="https://autotrac.slothsintel.com/" 
@@ -189,7 +271,7 @@
       
       <div class="sub-divider"></div>
 
-      <!-- 4. Genomic surveillance -->
+      <!-- 3. Genomic surveillance -->
       <h2>Predictive Modelling & Public Health Decision Support</h2>
       <p class="work-links">
         <a href="https://profiles.imperial.ac.uk/xi.lu" 
@@ -231,7 +313,7 @@
 
       <div class="sub-divider"></div>
 
-      <!-- 5. Scalable data curation -->
+      <!-- 2. Scalable data curation -->
       <h2>Scalable Data Curation & Workflow Automation</h2>
       <p class="work-links">
         <a href="https://www.sanger.ac.uk/person/lu-xi/" 
@@ -263,7 +345,7 @@
 
       <div class="sub-divider"></div>
 
-      <!-- 6. Next-generation networks -->
+      <!-- 1. Next-generation networks -->
       <h2>Reliable Systems Design in Next-Generation Networks</h2>
       <p class="work-links">
         <a href="https://kclpure.kcl.ac.uk/portal/en/persons/xi-lu/"
@@ -306,15 +388,11 @@
 
   <section id="cv" class="tab-section">
     <div class="container">
-      <h1>CV</h1>
+      <h1>Professional CV</h1>
       <div class="divider"></div>
 
       <p>
-        I am an independent data professional (computer modeller!) with a background in applied data science,
-        machine learning, and telecommunications. My work bridges rigorous data science, machine learning, 
-        and decision systems design — emphasising transparency, reliability, and real-world impact. 
-        I support organisations in building lightweight analytics, reproducible workflows, 
-        and accountable machine learning tools that perform under uncertain and messy data conditions.
+        Education, research, and industry experience (UK-based, international scope)
       </p>
 
       <div class="sub-divider"></div>
@@ -428,15 +506,15 @@
       <h2>Teaching & Public Engagement</h2>
       <p>
         Experience delivering postgraduate and undergraduate teaching, supervising PhD student projects,
-        and engaging in public and interdisciplinary research communication.
+        and <a href="media.html#interviews" target="_blank" rel="noopener">engaging</a> in public and interdisciplinary research communication.
       </p>
 
       <div class="sub-divider"></div>
 
       <!-- Download -->
       <p>
-        A full academic CV is available
-        <a href="assets/work/cv/Xi_Lu_Data_Scientist_CV_mother.pdf" download>here</a>.
+        A full academic CV is 
+        <a href="assets/work/cv/Xi_Lu_Data_Scientist_CV_mother.pdf" download>available</a>.
       </p>
     </div>
   </section>
@@ -469,22 +547,39 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-<script>
-  // Close dropdown after selecting a menu item
-  document.querySelectorAll(".nav-dropdown-link").forEach(a => {
-    a.addEventListener("click", () => {
-      const dd = a.closest("details");
-      if (dd) dd.removeAttribute("open");
-    });
-  });
 
-  // Close dropdown when clicking outside
-  document.addEventListener("click", (e) => {
-    document.querySelectorAll(".nav-dropdown[open]").forEach(dd => {
-      if (!dd.contains(e.target)) dd.removeAttribute("open");
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    const closeBtn = document.querySelector(".mobile-nav__close");
+
+    function openNav(){
+      mobileNav.classList.add("is-open");
+      mobileNav.setAttribute("aria-hidden", "false");
+      toggle?.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-open");
+    }
+
+    function closeNav(){
+      mobileNav.classList.remove("is-open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      toggle?.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+    }
+
+    toggle?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openNav();
     });
-  });
-</script>
+
+    closeBtn?.addEventListener("click", closeNav);
+
+    mobileNav?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeNav));
+
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeNav();
+    });
+  </script>
 
 </body>
 </html>

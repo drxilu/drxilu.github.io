@@ -36,7 +36,7 @@
           <div class="nav-dropdown-menu" role="menu" aria-label="Work sections">
             <a class="nav-dropdown-link" href="work.html#currentfocus" role="menuitem">current focus</a>
             <a class="nav-dropdown-link" href="work.html#selectedwork" role="menuitem">selected work</a>
-            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">cv</a>
+            <a class="nav-dropdown-link" href="work.html#cv" role="menuitem">professional cv</a>
             <a class="nav-dropdown-link" href="work.html#testimonials" role="menuitem">testimonials</a>
           </div>
         </details>
@@ -54,6 +54,57 @@
 
         <a class="nav-link" href="contact.html">contact</a>
       </nav>
+
+      <!-- Mobile hamburger (mobile only) -->
+      <button class="nav-toggle" type="button"
+              aria-label="Open menu"
+              aria-controls="mobile-nav"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Mobile overlay nav -->
+      <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+        <div class="mobile-nav__top">
+          <div class="mobile-nav__brand"></div>
+          <button class="mobile-nav__close" type="button" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="mobile-nav__menu" aria-label="Mobile navigation">
+ 
+        <div class="mobile-nav__cta">
+          <a class="mobile-btn mobile-btn--primary" href="contact.html">Let’s chat</a>
+        </div>         
+        <!-- Home (expandable) -->
+          <details class="mobile-acc">
+            <summary>Home</summary>
+            <a href="index.html#overview">Overview</a>
+            <a href="index.html#about">About</a>
+          </details>
+
+          <!-- Work (top-level link; no submenu) -->
+          <details class="mobile-acc">
+            <summary>Work</summary>
+            <a href="work.html#currentfocus">Current Focus</a>
+            <a href="work.html#selectedwork">Selected Work</a>
+            <a href="work.html#cv">Professional CV</a>
+            <a href="work.html#testimonials">Testimonials</a>
+          </details>
+
+          <!-- Media (expandable) -->
+          <details class="mobile-acc">
+            <summary>Media</summary>
+            <a href="media.html#publications">Publications</a>
+            <a href="media.html#interviews">Talks & Interviews</a>
+          </details>
+          
+          <a class="mobile-link" href="support.html">Support</a>
+
+          <!-- Contact (top-level) -->
+          <a class="mobile-link" href="contact.html">Contact</a>
+
+          
+        </nav>
 
     </div>
   </header>
@@ -130,19 +181,35 @@
   </script>
 
   <script>
-    // Close dropdown after selecting a menu item
-    document.querySelectorAll(".nav-dropdown-link").forEach(a => {
-      a.addEventListener("click", () => {
-        const dd = a.closest("details");
-        if (dd) dd.removeAttribute("open");
-      });
+    const toggle = document.querySelector(".nav-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    const closeBtn = document.querySelector(".mobile-nav__close");
+
+    function openNav(){
+      mobileNav.classList.add("is-open");
+      mobileNav.setAttribute("aria-hidden", "false");
+      toggle?.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-open");
+    }
+
+    function closeNav(){
+      mobileNav.classList.remove("is-open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      toggle?.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+    }
+
+    toggle?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openNav();
     });
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      document.querySelectorAll(".nav-dropdown[open]").forEach(dd => {
-        if (!dd.contains(e.target)) dd.removeAttribute("open");
-      });
+    closeBtn?.addEventListener("click", closeNav);
+
+    mobileNav?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeNav));
+
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeNav();
     });
   </script>
 
