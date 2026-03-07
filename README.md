@@ -1,100 +1,95 @@
 # Xi Lu PhD (aka daddy sloth)
 
-PhD | Data Professsional | AI Advisor
-Founder of **Sloths Intel**
+PhD | Data Professsional | AI Advisor | Hybrid Intelligence
+Chief Scientist & Founder of **Sloths Intel**
 
-I build applied AI systems, data engineering pipelines, and automation tools that turn messy real-world data into reliable decisions.
+I build **deliberate AI systems** that transform messy real-world data into reliable insight.
 
-My work focuses on **hybrid intelligence** — combining raw data, machine learning, domain expertise, and human judgment to produce systems that are practical, transparent, and robust in real-world environments. ([slothsintel.com][1])
+My work sits at the intersection of:
 
----
+• data engineering  
+• applied machine learning  
+• decision-support systems  
+• human–AI collaboration  
 
-## Research & Engineering Focus
-
-* Data engineering and analytics pipelines
-* Hybrid AI systems for decision support
-* Generative AI workflows and automation
-* Applied machine learning for business intelligence
-* Open-source experimentation and tooling
+Rather than chasing artificial “general intelligence”, my focus is **Hybrid Intelligence** — systems where machine learning, structured data, domain knowledge, and human judgement work together.
 
 ---
 
-## Key Open Source Projects
+## Current Work
+
+I am currently building open tools and systems through **Sloths Intel Ltd**, exploring how small organisations and independent professionals can use AI responsibly and effectively.
+
+Key themes include:
+
+• hybrid AI workflows  
+• data integration and analysis  
+• decision-support systems  
+• automation pipelines  
+• practical generative AI
+
+---
+
+## Open Projects
 
 ### AutoTrac
+Track where time actually goes.
 
-A lightweight analytics platform helping freelancers and small teams understand where their **time and income actually go**.
+A lightweight analytics platform designed for freelancers and small teams to analyse time usage, project work, and income patterns.
 
-**Features**
-
-* Time and income tracking
-* Metadata-driven analytics
-* Exportable productivity insights
-
-**Tech**
+Technologies  
 TypeScript · Web analytics · Data pipelines
 
 ---
 
 ### AutoWeave
+Turn scattered data into structured insight.
 
-A web application designed to **merge scattered business metadata into clean analytical datasets**.
+AutoWeave integrates multiple datasets into coherent analytical outputs, helping users build reliable datasets from messy inputs.
 
-**Features**
-
-* Automated data ingestion
-* Data cleaning and schema alignment
-* Interactive analysis and summaries
-
-**Tech**
-JavaScript · Data processing · Web tools
+Technologies  
+JavaScript · Data processing · Visualization
 
 ---
 
 ### AutoVisuals
+Automated visual asset generation pipeline.
 
-An automated pipeline for generating and processing visual assets at scale.
+A system designed to automate the creation, processing, and organisation of visual assets through generative workflows.
 
-**Features**
-
-* Prompt-to-asset workflow automation
-* Metadata management
-* Batch processing and quality control
-
-**Tech**
-Python · Generative AI workflows · Image pipelines
+Technologies  
+Python · AI pipelines · image processing
 
 ---
 
 ## Philosophy
 
-Sloths are often mistaken for slow.
-In reality they are **efficient and deliberate**, operating with minimal wasted effort in complex environments.
+Sloths are often misunderstood as slow.
 
-That philosophy guides **Sloths Intel** — building systems that ignore noise, conserve effort, and act only when it matters. ([slothsintel.com][1])
+In reality they are **deliberate, energy-efficient, and resilient** in complex environments.
 
-The goal is intelligence that stays clear under pressure and produces **decisions people can trust**.
+Sloths Intel adopts the same philosophy:  
+build systems that move carefully, avoid noise, and produce **clear decisions when they matter**.
 
 ---
 
 ## Links
 
-Website
+Personal site  
 https://xilu.slothsintel.com
 
-Company
+Company  
 https://slothsintel.com
 
-GitHub Organisation
+GitHub Organisation  
 https://github.com/slothsintel
 
 ---
 
-## Current Interests
+## Research Interests
 
-* Hybrid AI for decision systems
-* Automated data pipelines
-* AI evaluation and model robustness
-* Practical AI for small organisations
-
-[1]: https://slothsintel.com/?utm_source=chatgpt.com "Sloths Intel: data to decisions"
+Hybrid Intelligence  
+AI evaluation and reliability  
+Data engineering pipelines  
+Decision-support systems  
+Responsible AI deployment
