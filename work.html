@@ -623,5 +623,18 @@
   
   </script>
 
+<script>
+function scrollPlots(button, direction) {
+  const carousel = button.closest('.plot-carousel');
+  const container = carousel.querySelector('.product-plot-strip');
+  const scrollAmount = container.clientWidth * 0.8;
+
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
+
 </body>
 </html>
